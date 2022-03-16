@@ -5,160 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bootstrap first project</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-
-    <style>
-      body {
-        font-family: Roboto;
-      }
-      #explore-btn {
-        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.438);
-      }
-      #explore-btn i {
-        transition: 0.2s ease;
-        padding-left: 5px;
-      }
-      #explore-btn:hover i {
-        padding-left: 15px;
-      }
-      #quality-section {
-        box-shadow: 0 2px 5px 2px rgb(64 60 67 / 16%);
-        width: 70%;
-        margin-top: 10px;
-        border-radius: 10px;
-        padding: 2%;
-        text-align: justify;
-        margin-bottom: 10rem;
-      }
-      .badge{
-          background-color: white;
-          border: 1px solid #6C63FF;
-          border-radius: 50%;
-          color: #6C63FF;
-          padding: 0;
-          width: 15px;
-          height: 15px;
-          position: absolute;
-          font-size: 13px;
-          margin-top: -3px;
-          margin-left: -3px;
-      }
-
-      @media only screen and (max-width: 768px) {
-        #quality-section{
-        width: 100%;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <!-- --------Hero Section ---------------->
     <section id="hero-section">
       <!-- --------------Nav Bar---------------- -->
-      <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top">
-        <div class="container">
-          <a class="navbar-brand" href="#">
-            <img
-              src="images/image/logo.png"
-              style="width: 40%;"
-              class="d-inline-block align-top"
-              alt=""
-            />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="offcanvas offcanvas-end"
-            tabindex="-1"
-            id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel"
-          >
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                Ecommerce
-              </h5>
-              <button
-                type="button"
-                class="btn-close text-reset"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
-                    >Home</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Quality</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    id="offcanvasNavbarDropdown"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Product
-                  </a>
-                  <ul
-                    class="dropdown-menu mb-1"
-                    aria-labelledby="offcanvasNavbarDropdown"
-                  >
-                    <li>
-                      <a class="dropdown-item border-0" href="#">Grocery</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">Fast Food</a>
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">All Product</a>
-                    </li>
-                  </ul>
-                  </li>
-                
-                <li class="nav-item mt-2">
-                    <a href="#">
-                        <i  style="color: #6C63FF;" class="fa-solid fa-cart-shopping"></i><span class="badge badge-light">4</span>
-                      </a>
-                </li>
-              </ul>
-              <form class="d-flex">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                  style="border: 1px solid #6C63FF; color: #6C63FF;"
-                />
-                <button style="background: white; border-radius: 5px; border: 1px solid #6C63FF; color: #6C63FF;" type="submit">
-                  Search
-                </button>
-              </form>
-            </div>
+      <nav class="navbar-fluide navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#"><img src="images/image/logo.png" alt=""></a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Product<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Grocery</a></li>
+                  <li><a href="#">Food</a></li>
+                  <li><a href="#">Dress</a></li>
+                  <li><a href="#">Electronics</a></li>
+                  <li><a href="#">Fruit</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Review</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
           </div>
         </div>
       </nav>
@@ -166,19 +55,17 @@
       <!-- ----------------Header Section --------------- -->
       <section
         id="header-section"
-        class="container d-flex align-items-center mt-5 pb-3"
+        class="container d-flex align-items-center mt-5 pb-3" style="padding-top: 13rem;"
       >
         <div class="row mt-5">
           <div
-            class="content col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-md-3 mt-lg-5 mt-xl-5 pt-lg-5 pt-xl-5"
+            class="content col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-md-3 mt-lg-5 mt-xl-5 pt-lg-5 pt-xl-5" style="margin: 5rem 0 5rem 0;"
           >
-            <h1 style="color: #6C63FF; text-transform: uppercase">
-              Grocery Shopping
+            <h1 style="color: #6c63ff; text-transform: uppercase; font-size: 50px;">
+              The Ecommerce
             </h1>
-            <h3 style="color: #6C63FF">
-              Buy Our World Best And Healthy Food!
-            </h3>
-            <p>
+            <h3 style="color: #6c63ff; font-size: 30px;">Buy Our World Best And Healthy Food!</h3>
+            <p style="font-size: 17px;">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa
               quis ipsum, cum, repellendus assumenda enim porro nihil,
               reiciendis libero totam beatae esse molestias eum eos. Molestias
@@ -187,19 +74,19 @@
             <button
               id="explore-btn"
               class="btn"
-              style="background-color: #6C63FF; font-size: 19px; color: white"
+              style="background-color: #6c63ff; font-size: 19px; color: white"
             >
               Explore Now <i class="fa-solid fa-arrow-right-long"></i></button
             ><br />
-            <small class="text-secondary d-block mt-2 font-3"
+            <small style="margin-top: 10px; display: block; font-size: 15px; color: rgb(121, 120, 120);"
               >For buy and add to cart any product, please
-              <a href="#">Login</a> here!</small
+              <a href="#" style="color: #6c63ff; font-weight: bold;">Login</a> here!</small
             >
           </div>
 
           <div
             class="image col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-md-5"
-          >
+           style="margin-bottom: 8rem;">
             <img
               src="images/image/header3.svg"
               alt=""
@@ -213,7 +100,7 @@
     <!-- ---------------Quality Section------------- -->
 
     <section id="quality-section" class="container mt-5">
-      <h2 style="color: #6C63FF;">About Our Quality</h2>
+      <h2 style="color: #6c63ff">About Our Quality</h2>
       <p class="d-flex">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste sit
         cumque soluta sapiente dolor quaerat ea aperiam corrupti, consequatur
@@ -231,24 +118,376 @@
         nesciunt voluptatum aspernatur sequi cumqu!
       </p>
 
-     
       <div class="collapse" id="collapseExample">
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis iusto eum dicta commodi, accusantium illum labore, neque minima natus error itaque, asperiores vitae aspernatur ad placeat nesciunt maiores in cum? Aut vitae, ea, consequuntur ab repellendus optio minus beatae suscipit adipisci necessitatibus quam? Laboriosam maiores aspernatur libero saepe corrupti praesentium?Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis iusto eum dicta commodi, accusantium illum labore, neque minima natus error itaque, asperiores vitae aspernatur ad placeat nesciunt maiores in cum? Aut vitae, ea, consequuntur ab repellendus optio minus beatae suscipit adipisci necessitatibus quam? Laboriosam maiores aspernatur libero saepe corrupti praesentium?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+          iusto eum dicta commodi, accusantium illum labore, neque minima natus
+          error itaque, asperiores vitae aspernatur ad placeat nesciunt maiores
+          in cum? Aut vitae, ea, consequuntur ab repellendus optio minus beatae
+          suscipit adipisci necessitatibus quam? Laboriosam maiores aspernatur
+          libero saepe corrupti praesentium?Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Blanditiis iusto eum dicta commodi,
+          accusantium illum labore, neque minima natus error itaque, asperiores
+          vitae aspernatur ad placeat nesciunt maiores in cum? Aut vitae, ea,
+          consequuntur ab repellendus optio minus beatae suscipit adipisci
+          necessitatibus quam? Laboriosam maiores aspernatur libero saepe
+          corrupti praesentium?
         </p>
-      </div> 
+      </div>
       <span
         data-toggle="collapse"
         href="#collapseExample"
         role="button"
         aria-expanded="false"
         aria-controls="collapseExample"
-        style="color: #6C63FF;"
+        style="color: #6c63ff"
       >
         <small>Read More..</small>
       </span>
     </section>
 
+    <!-- ----------------Product Section--------------- -->
+    <div class="filter-main container">
+      <h2>Our Product</h2>
+      <div class="line"></div>
+      <h5>Chosse what you like!</h5>
+
+      <div id="filter-myBtnContainer">
+        <button class="filter-btn filter-active" onclick="filterSelection('filter-all')">
+          Show all
+        </button>
+        <button class="filter-btn" onclick="filterSelection('filter-grocery')">Grocery</button>
+        <button class="filter-btn" onclick="filterSelection('filter-food')">Food</button>
+        <button class="filter-btn" onclick="filterSelection('filter-dress')">Dress</button>
+        <button class="filter-btn" onclick="filterSelection('filter-electronics')">Electronics</button>
+        <button class="filter-btn" onclick="filterSelection('filter-fruit')">Fruit</button>
+      </div>
+
+      <!-- Portfolio Gallery Grid -->
+      <div class="filter-row container">
+        <div class="filter-column filter-fruit">
+          <div class="filter-content">
+            <img src="images/product/Grapes-fruit.jpg" alt="fruit" style="width: 100%" />
+            <h4>Grapes fruit</h4>
+            <p>$3 - per kg</p>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-regular fa-star regular"></i>
+            <button class="filter-button">Add cart <i id="cart" class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
+        <div class="filter-column filter-fruit">
+          <div class="filter-content">
+            <img src="images/product/Benana-fruit.jpg" alt="fruit" style="width: 100%" />
+            <h4>Retro</h4>
+            <p>Lorem ipsum dolor..</p>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-regular fa-star regular"></i>
+            <i class="fa-regular fa-star regular"></i>
+            <button class="filter-button">Add cart <i class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
+        <div class="filter-column filter-fruit">
+          <div class="filter-content">
+            <img src="images/product/pomelo-fruit.jpg" alt="fruit" style="width: 100%" />
+            <h4>Woman</h4>
+            <p>Lorem ipsum dolor..</p>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <button class="filter-button">Add cart <i class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
+        <div class="filter-column filter-fruit">
+          <div class="filter-content">
+            <img src="images/product/mengo-fruit.jpg" alt="fruit" style="width: 100%" />
+            <h4>Woman</h4>
+            <p>Lorem ipsum dolor..</p>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-regular fa-star regular"></i>
+            <button class="filter-button">Add cart <i class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
+        <div class="filter-column filter-fruit">
+          <div class="filter-content">
+            <img src="images/product/apple-fruit.jpg" alt="fruit" style="width: 100%" />
+            <h4>Lights</h4>
+            <p>Lorem ipsum dolor..</p>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-regular fa-star regular"></i>
+            <button class="filter-button">Add cart <i class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
+        <div class="filter-column filter-electronics">
+          <div class="filter-content">
+            <img src="images/product/laptop-elec.webp" alt="electronics" style="width: 100%" />
+            <h4>Woman</h4>
+            <p>Lorem ipsum dolor..</p>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-regular fa-star regular"></i>
+            <i class="fa-regular fa-star regular"></i>
+            <button class="filter-button">Add cart <i class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
+        <div class="filter-column filter-electronics">
+          <div class="filter-content">
+            <img src="images/product/headphone-elec.webp" alt="electronics" style="width: 100%" />
+            <h4>Forest</h4>
+            <p>Lorem ipsum dolor..</p>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-regular fa-star regular"></i>
+            <button class="filter-button">Add cart <i class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
+
+        <div class="filter-column filter-electronics">
+          <div class="filter-content">
+            <img src="images/product/camera-elec.webp" alt="electronics" style="width: 100%" />
+            <h4>Retro</h4>
+            <p>Lorem ipsum dolor..</p>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <button class="filter-button">Add cart <i class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
+        <div class="filter-column filter-electronics">
+          <div class="filter-content">
+            <img src="images/product/mobile-elec.webp" alt="electronics" style="width: 100%" />
+            <h4>Woman</h4>
+            <p>Lorem ipsum dolor..</p>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-regular fa-star regular"></i>
+            <i class="fa-regular fa-star regular"></i>
+            <i class="fa-regular fa-star regular"></i>
+            <i class="fa-regular fa-star regular"></i>
+            <button class="filter-button">Add cart <i class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
+        <div class="filter-column filter-electronics">
+          <div class="filter-content">
+            <img src="images/product/tablet-elec.webp" alt="electronics" style="width: 100%" />
+            <h4>Woman</h4>
+            <p>Lorem ipsum dolor..</p>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-regular fa-star regular"></i>
+            <i class="fa-regular fa-star regular"></i>
+            <button class="filter-button">Add cart <i class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
+        <div class="filter-column filter-food">
+          <div class="filter-content">
+            <img src="images/product/easter-delight-fastfood.webp" alt="food" style="width: 100%" />
+            <h4>Fast</h4>
+            <p>Lorem ipsum dolor..</p>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-regular fa-star regular"></i>
+            <button class="filter-button">Add cart <i class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
+        <div class="filter-column filter-food">
+          <div class="filter-content">
+            <img src="images/product/chicken-roast-fastfood.webp" alt="food" style="width: 100%" />
+            <h4>Girl</h4>
+            <p>Lorem ipsum dolor..</p>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-regular fa-star regular"></i>
+            <i class="fa-regular fa-star regular"></i>
+            <i class="fa-regular fa-star regular"></i>
+            <i class="fa-regular fa-star regular"></i>
+            <button class="filter-button">Add cart <i class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
+        
+        <div class="filter-column filter-food">
+          <div class="filter-content">
+            <img src="images/product/summer-cooking-fastfood.webp" alt="food" style="width: 100%" />
+            <h4>Forest</h4>
+            <p>Lorem ipsum dolor..</p>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-regular fa-star regular"></i>
+            <i class="fa-regular fa-star regular"></i>
+            <i class="fa-regular fa-star regular"></i>
+            <button class="filter-button">Add cart <i class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
+        <div class="filter-column filter-food">
+          <div class="filter-content">
+            <img src="images/product/roasted-marrow-fastfood.webp" alt="food" style="width: 100%" />
+            <h4>Woman</h4>
+            <p>Lorem ipsum dolor..</p>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-regular fa-star regular"></i>
+            <button class="filter-button">Add cart <i class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
+        <div class="filter-column filter-food">
+          <div class="filter-content">
+            <img src="images/product/pork-sandwich-fastfood.webp" alt="food" style="width: 100%" />
+            <h4>Classic</h4>
+            <p>Lorem ipsum dolor..</p>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-regular fa-star regular"></i>
+            <i class="fa-regular fa-star regular"></i>
+            <button class="filter-button">Add cart <i class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
+        <div class="filter-column filter-food">
+          <div class="filter-content" style="width: 100%;">
+            <img src="images/product/tiener-schnitze-fast-food.webp" alt="food" style="width: 100%;" />
+            <h4>Girl</h4>
+            <p>Lorem ipsum dolor..</p>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <button class="filter-button">Add cart <i class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
+        <div class="filter-column filter-dress">
+          <div class="filter-content">
+            <img src="images/product/pant-dress.jpg" alt="dress" style="width: 100%" />
+            <h4>Woman</h4>
+            <p>Lorem ipsum dolor..</p>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <button class="filter-button">Add cart <i class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
+        <div class="filter-column filter-dress">
+          <div class="filter-content">
+            <img src="images/product/shoe-dress.jpg" alt="dress" style="width: 100%" />
+            <h4>Woman</h4>
+            <p>Lorem ipsum dolor..</p>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-solid fa-star solid"></i>
+            <i class="fa-regular fa-star regular"></i>
+            <button class="filter-button">Add cart <i class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
+          <div class="filter-column filter-grocery">
+            <div class="filter-content">
+              <img src="images/product/purple-cabbage-grocery.webp" alt="grocery" style="width: 100%" />
+              <h4>Lights</h4>
+              <p>Lorem ipsum dolor..</p>
+              <i class="fa-solid fa-star solid"></i>
+              <i class="fa-solid fa-star solid"></i>
+              <i class="fa-solid fa-star solid"></i>
+              <i class="fa-solid fa-star solid"></i>
+              <i class="fa-solid fa-star solid"></i>
+              <button class="filter-button">Add cart <i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+          <div class="filter-column filter-grocery">
+            <div class="filter-content">
+              <img src="images/product/broclli-grocery.webp" alt="grocery" style="width: 100%" />
+              <h4>Retro</h4>
+              <p>Lorem ipsum dolor..</p>
+              <i class="fa-solid fa-star solid"></i>
+              <i class="fa-solid fa-star solid"></i>
+              <i class="fa-solid fa-star solid"></i>
+              <i class="fa-solid fa-star solid"></i>
+              <i class="fa-solid fa-star solid"></i>
+              <button class="filter-button">Add cart <i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+          <div class="filter-column filter-grocery">
+            <div class="filter-content">
+              <img src="images/product/tomato-grocery.webp" alt="grocery" style="width: 100%" />
+              <h4>Woman</h4>
+              <p>Lorem ipsum dolor..</p>
+              <i class="fa-solid fa-star solid"></i>
+              <i class="fa-solid fa-star solid"></i>
+              <i class="fa-solid fa-star solid"></i>
+              <i class="fa-regular fa-star regular"></i>
+              <i class="fa-regular fa-star regular"></i>
+              <button class="filter-button">Add cart <i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+          </div>
+        <!-- END GRID -->
+      </div>
+
+      <!-- END MAIN -->
+    </div>
+
+
+<!-- --------------------Review Section Here--------------- -->
+<div class="container review">
+	<div class="row">
+		<div class="col-md-8 col-center">
+			<h2 id="review-title">Customer Review</h2>
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<!-- Carousel indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+				</ol>   
+				<!-- Wrapper for carousel items -->
+				<div class="carousel-inner">
+					<div class="item active">
+						<div class="img-box"><img src="images/review/person1.jpg" alt=""></div>
+						<p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
+						<p class="overview"><b>Paula Wilson</b>, Media Analyst</p>
+					</div>
+					<div class="item">
+						<div class="img-box"><img src="images/review/person2.jpg" alt=""></div>
+						<p class="testimonial">Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Utmtc tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida odio.</p>
+						<p class="overview"><b>Antonio Moreno</b>, Web Developer</p>
+					</div>
+					<div class="item">
+						<div class="img-box"><img src="images/review/person3.jpg" alt=""></div>
+						<p class="testimonial">Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia. Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt fringilla massa. Etiam hendrerit dolor eget rutrum.</p>
+						<p class="overview"><b>Michael Holz</b>, Seo Analyst</p>
+					</div>
+				</div>
+				<!-- Carousel controls -->
+				<a class="carousel-control left" href="#myCarousel" data-slide="prev">
+					<i class="fa fa-angle-left"></i>
+				</a>
+				<a class="carousel-control right" href="#myCarousel" data-slide="next">
+					<i class="fa fa-angle-right"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
 
 
 
@@ -262,10 +501,11 @@
 
 
 
-    
 
-    <!-- --------------------------Javascript File----------- -->
+    <!-- Javascript Internal Code Here -->
 
+    <!-- --------------------------Javascript File Link----------- -->
+    <script src="app.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -286,6 +526,5 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
   </body>
 </html>

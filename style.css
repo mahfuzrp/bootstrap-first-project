@@ -1,0 +1,309 @@
+
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Roboto;
+        font-size: 16px;
+      }
+
+      /* Nav bar---------------- */
+      .navbar-inverse {
+        background-color: #6c63ff;
+        border-color: #080808;
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+        padding: 10px 0;
+    }
+      .navbar-brand{
+          padding: 0;
+      }
+      .navbar-brand img{
+          width: 50%;
+      }
+
+      .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover{
+        background-color: transparent;
+        color: #fff;
+      }
+      .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover{
+        background-color: transparent;
+        color: #fff;
+      }
+      .navbar-inverse .navbar-nav>li>a{
+        color: #fff;
+      }
+
+
+      #explore-btn {
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.438);
+        color: #F8F9FA;
+        border: none;
+        outline: none;
+        padding: 10px 20px;
+      }
+      #explore-btn i {
+        transition: 0.2s ease;
+        padding-left: 5px;
+      }
+      #explore-btn:hover i {
+        padding-left: 15px;
+      }
+      #quality-section {
+        box-shadow: 0 2px 5px 2px rgb(64 60 67 / 16%);
+        width: 70%;
+        margin-top: 10px;
+        border-radius: 10px;
+        padding: 2%;
+        text-align: justify;
+        margin-bottom: 5rem;
+      }
+      .badge {
+        background-color: white;
+        border: 1px solid #6c63ff;
+        border-radius: 50%;
+        color: #6c63ff;
+        padding: 0;
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        font-size: 13px;
+        margin-top: -3px;
+        margin-left: -3px;
+      }
+
+      /* --------For Product Filter Galary---------- */
+      .filter-row{
+          width: 100%;
+      }
+      .filter-main {
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      .filter-main h2{
+        word-break: break-all;
+        margin-bottom: 2px;
+        color: #6c63ff;
+      }
+      .filter-main h5{
+        word-break: break-all;
+        margin-bottom: 2px;
+        color: gray;
+        margin-top: 10px;
+        font-size: 22px;
+      }
+      .filter-main .line{
+        height: 1px;
+        background-color: rgb(214, 214, 214);
+      }
+      .filter-main .filter-row {
+        margin: 10px -16px;
+      }
+
+      /* Add padding BETWEEN each column */
+      .filter-main .filter-row,
+      .filter-main .filter-row > .filter-column {
+        padding: 8px;
+      }
+
+      /* Create three equal columns that floats next to each other */
+      .filter-column {
+        float: left;
+        width: 33.33%;
+        display: none; /* Hide all elements by default */
+      }
+
+      /* Clear floats after rows */
+      .filter-main .filter-row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Content */
+      .filter-main .filter-content {
+        background-color: #F8F9FA;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px 2px rgb(64 60 67 / 16%);
+        transition: .2s ease-in-out;
+        padding: 10px;
+        padding-bottom: 5px;
+      }
+      .filter-content .solid{
+        color: #FFA41C;
+      }
+      .filter-content .regular{
+        color: #FFA41C;
+      }
+      .filter-content .filter-button{
+        background-color: #6c63ff;
+        padding: 2px 5px;
+        border: none;
+        outline: none;
+        color: white;
+        border-radius: 3px;
+        transition: .2s ease-in-out;
+      }
+      .filter-content h4{
+        margin: 3px 0 2px 0;
+      }
+      .filter-content p{
+        margin: 0;
+        font-weight: bold;
+      }
+      .filter-main .filter-content:hover{
+        background-color: #6c63ff;
+        box-shadow: 0 1px 5px 2px #bdbdbd;
+        color: white;
+      }
+      .filter-main .filter-content:hover .filter-button{
+        background-color: white;
+        color: #6c63ff;
+        font-weight: 500;
+      }
+
+      /* The "show" class is added to the filtered elements */
+      .filter-main .filter-show {
+        display: block;
+      }
+
+      /* Style the buttons */
+      .filter-main .filter-btn {
+        border: none;
+        outline: none;
+        padding: 5px 12px;
+        background-color: #e7e9eb;
+        cursor: pointer;
+        margin-top: 13px;
+        margin-right: 2px;
+      }
+
+      .filter-main .filter-btn:hover {
+        background-color: #ddd;
+      }
+
+      .filter-main .filter-btn.filter-active {
+        background-color: #6c63ff;
+        color: white;
+      }
+/* ------------Css slider---------- */
+.review{
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+    border: 1px solid #bdbdbdda;
+    border-radius: 20px;
+    padding-bottom: 1rem;
+}
+#review-title {
+	color: #6c63ff;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: "Roboto", sans-serif;
+	font-weight: bold;
+	position: relative;
+	margin: 30px 0 60px;
+}
+#review-title::after {
+	content: "";
+	width: 30%;
+	position: absolute;
+	margin: 0 auto;
+	height: 2px;
+	background: #bdbdbd;
+	left: 0;
+	right: 0;
+	bottom: -10px;
+}
+.col-center {
+	margin: 0 auto;
+	float: none !important;
+}
+.carousel {
+	margin: 50px auto;
+	padding: 0 70px;
+}
+.carousel .item {
+	color: black;
+	font-size: 14px;
+    text-align: center;
+	overflow: hidden;
+    min-height: 290px;
+}
+.carousel .item .img-box {
+	width: 135px;
+	height: 135px;
+	margin: 0 auto;
+	padding: 5px;
+	border: 1px solid #bdbdbd;
+	border-radius: 50%;
+}
+.carousel .img-box img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	border-radius: 50%;
+}
+.carousel .testimonial {
+	padding: 30px 0 10px;
+}
+.carousel .overview {	
+	font-style: italic;
+}
+.carousel .overview b {
+	text-transform: uppercase;
+	color: #6c63ff;
+}
+.carousel .carousel-control {
+	width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    top: 50%;
+	background: none;
+}
+.carousel-control i {
+    font-size: 50px;
+	line-height: 42px;
+    position: absolute;
+    display: inline-block;
+    color: #6c63ff;
+    text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+}
+.carousel .carousel-indicators {
+	bottom: -40px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+	width: 10px;
+	height: 10px;
+	margin: 1px 3px;
+	border-radius: 50%;
+}
+.carousel-indicators li {	
+	background: #6b63ff94;
+	border-color: transparent;
+	box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+}
+.carousel-indicators li.active {	
+	background: #6c63ff;		
+	box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      @media only screen and (max-width: 768px) {
+        #quality-section {
+          width: 100%;
+        }
+      }
